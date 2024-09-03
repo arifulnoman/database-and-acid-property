@@ -1,5 +1,11 @@
 # Table of Contents
 
+## 1. Anomalies
+
+- 1.1 [Insertion Anomaly](https://github.com/arifulnoman/database-and-acid-property/blob/main/README.md#1-insertion-anomaly)
+- 1.2 [Update Anomaly](https://github.com/arifulnoman/database-and-acid-property/blob/main/README.md#2-update-anomaly)
+- 1.3 [Deletion Anomaly](https://github.com/arifulnoman/database-and-acid-property/blob/main/README.md#3-deletion-anomaly)
+
 ## 1. Normalization
 
 - 1.1 [First Normal Form (1NF)](https://github.com/arifulnoman/database-and-acid-property/blob/main/README.md#first-normal-form-1nf)
@@ -30,6 +36,8 @@ In relational databases, anomalies are problems that can arise when tables are n
 
 ### **1. Insertion Anomaly**
 
+🔼 [Back to Top](https://github.com/arifulnoman/database-and-acid-property/blob/main/README.md#table-of-contents)
+
 An **Insertion Anomaly** occurs when the design of a database schema makes it difficult to insert data into a table without introducing inconsistency or redundancy.
 
 - **Example**: Suppose we have a table that stores information about students and the courses they are enrolled in:
@@ -45,6 +53,8 @@ An **Insertion Anomaly** occurs when the design of a database schema makes it di
 
 ### **2. Update Anomaly**
 
+🔼 [Back to Top](https://github.com/arifulnoman/database-and-acid-property/blob/main/README.md#table-of-contents)
+
 An **Update Anomaly** occurs when we need to update the same piece of data in multiple places because it is duplicated in multiple rows. This can lead to data inconsistencies if all instances are not updated correctly.
 
 - **Example**: Using the same table as above, if Dr. Smith changes his name to Dr. Johnson, we would need to update all rows where Dr. Smith is listed as the instructor. If we forget to update one of those rows, your database will have inconsistent data:
@@ -57,6 +67,8 @@ An **Update Anomaly** occurs when we need to update the same piece of data in mu
   **Problem**: The instructor's name is inconsistent for the same course because it was not updated in all rows, leading to inaccurate data.
 
 ### **3. Deletion Anomaly**
+
+🔼 [Back to Top](https://github.com/arifulnoman/database-and-acid-property/blob/main/README.md#table-of-contents)
 
 A **Deletion Anomaly** occurs when deleting data inadvertently causes other useful data to be lost. This often happens when all data is stored in a single table and related data is not properly normalized.
 
@@ -89,6 +101,8 @@ A **Deletion Anomaly** occurs when deleting data inadvertently causes other usef
 
 ## First Normal Form (1NF)
 
+🔼 [Back to Top](https://github.com/arifulnoman/database-and-acid-property/blob/main/README.md#table-of-contents)
+
 - A relation will be 1NF if it contains an atomic value.
 - It states that an attribute of a table cannot hold multiple values. It must hold only single-valued attribute.
 - First normal form disallows the multi-valued attribute, composite attribute and their combinations.
@@ -114,6 +128,8 @@ Here's how we can represent the example of the **EMPLOYEE** table and its decomp
 | 12     | Sam      | 8589830302 | Punjab    |
 
 ## **Second Normal Form (2NF)**
+
+🔼 [Back to Top](https://github.com/arifulnoman/database-and-acid-property/blob/main/README.md#table-of-contents)
 
 **Second Normal Form (2NF)** is a higher level of database normalization that builds upon First Normal Form (1NF). A relation (or table) is in **2NF** if:
 
@@ -180,6 +196,8 @@ Now:
 Thus, all tables are now in **2NF**, with no partial dependencies remaining.
 
 ### **Third Normal Form (3NF)**
+
+🔼 [Back to Top](https://github.com/arifulnoman/database-and-acid-property/blob/main/README.md#table-of-contents)
 
 **Third Normal Form (3NF)** is a stage of database normalization designed to reduce redundancy and improve data integrity. A relation (or table) is in **3NF** if it satisfies the following conditions:
 
@@ -261,6 +279,8 @@ ACID stands for **Atomicity**, **Consistency**, **Isolation**, and **Durability*
 
 ### 1) Atomicity
 
+🔼 [Back to Top](https://github.com/arifulnoman/database-and-acid-property/blob/main/README.md#table-of-contents)
+
 Atomicity means that a transaction is "all or nothing." If any part of the transaction fails, the whole transaction should fail, and the system should return to its previous state. It ensures that transactions do not end up partially completed.
 
 **Example:** Imagine Remo wants to transfer $10 from his account (A) to Sheero's account (B). After the transaction, Remo's balance should decrease by $10, and Sheero's balance should increase by $10. If the money is deducted from Remo's account but not added to Sheero's account, the transaction is not atomic. Atomicity ensures that either both actions (debit and credit) happen, or neither does.
@@ -277,6 +297,8 @@ Thus, when the amount loses atomicity, then in the bank systems, this becomes a 
 
 ### 2) Consistency
 
+🔼 [Back to Top](https://github.com/arifulnoman/database-and-acid-property/blob/main/README.md#table-of-contents)
+
 Consistency ensures that a transaction brings the database from one valid state to another. After a transaction, the data should follow all the rules and constraints set on the database.
 
 **Example:**
@@ -287,6 +309,8 @@ In the above figure, there are three accounts, A, B, and C, where A is making a 
 
 ### 3) Isolation
 
+🔼 [Back to Top](https://github.com/arifulnoman/database-and-acid-property/blob/main/README.md#table-of-contents)
+
 Isolation ensures that transactions occur independently of each other. Even if multiple transactions happen at the same time, each transaction should be isolated so that they don’t interfere with each other.
 
 **Example:** If two operations are concurrently running on two different accounts, then the value of both accounts should not get affected. The value should remain persistent. As you can see in the below diagram, account A is making T1 and T2 transactions to account B and C, but both are executing independently without affecting each other. It is known as Isolation.
@@ -294,5 +318,7 @@ Isolation ensures that transactions occur independently of each other. Even if m
 ![ACID Properties in DBMS](https://static.javatpoint.com/dbms/images/acid-properties-in-dbms5.png)
 
 ### 4) Durability
+
+🔼 [Back to Top](https://github.com/arifulnoman/database-and-acid-property/blob/main/README.md#table-of-contents)
 
 Durability ensures the permanency of something. In DBMS, the term durability ensures that the data after the successful execution of the operation becomes permanent in the database. The durability of the data should be so perfect that even if the system fails or leads to a crash, the database still survives. However, if gets lost, it becomes the responsibility of the recovery manager for ensuring the durability of the database. For committing the values, the COMMIT command must be used every time we make changes.
