@@ -6,18 +6,18 @@
 - 1.2 [Update Anomaly](https://github.com/arifulnoman/database-and-acid-property/blob/main/README.md#2-update-anomaly)
 - 1.3 [Deletion Anomaly](https://github.com/arifulnoman/database-and-acid-property/blob/main/README.md#3-deletion-anomaly)
 
-## 1. Normalization
+## 2. Normalization
 
-- 1.1 [First Normal Form (1NF)](https://github.com/arifulnoman/database-and-acid-property/blob/main/README.md#first-normal-form-1nf)
-- 1.2 [Second Normal Form (2NF)](https://github.com/arifulnoman/database-and-acid-property/blob/main/README.md#second-normal-form-2nf)
-- 1.3 [Third Normal Form (3NF)](https://github.com/arifulnoman/database-and-acid-property/blob/main/README.md#third-normal-form-3nf)
+- 2.1 [First Normal Form (1NF)](https://github.com/arifulnoman/database-and-acid-property/blob/main/README.md#first-normal-form-1nf)
+- 2.2 [Second Normal Form (2NF)](https://github.com/arifulnoman/database-and-acid-property/blob/main/README.md#second-normal-form-2nf)
+- 2.3 [Third Normal Form (3NF)](https://github.com/arifulnoman/database-and-acid-property/blob/main/README.md#third-normal-form-3nf)
 
-## 2. ACID Properties
+## 3. ACID Properties
 
-- 2.1 [Atomicity](https://github.com/arifulnoman/database-and-acid-property/blob/main/README.md#1-atomicity)
-- 2.2 [Consistency](https://github.com/arifulnoman/database-and-acid-property/blob/main/README.md#2-consistency)
-- 2.3 [Isolation](https://github.com/arifulnoman/database-and-acid-property/blob/main/README.md#3-isolation)
-- 2.4 [Durability](https://github.com/arifulnoman/database-and-acid-property/blob/main/README.md#4-durability)
+- 3.1 [Atomicity](https://github.com/arifulnoman/database-and-acid-property/blob/main/README.md#1-atomicity)
+- 3.2 [Consistency](https://github.com/arifulnoman/database-and-acid-property/blob/main/README.md#2-consistency)
+- 3.3 [Isolation](https://github.com/arifulnoman/database-and-acid-property/blob/main/README.md#3-isolation)
+- 3.4 [Durability](https://github.com/arifulnoman/database-and-acid-property/blob/main/README.md#4-durability)
 
 ## Normalization
 
